@@ -1,104 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Aesthetic Login </title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <title>Login Form</title>
+  <style>
+    body {
+      background-image: url("https://www.shutterstock.com/image-vector/christmas-background-with-wooden-texture-260nw-1581039661.jpg");
+      background-size: cover;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
 
-        body, html {
-            height: 100%;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #6e7ff3, #b4a0e0);
-            overflow: hidden;
-        }
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
 
-        .container {
-            background: rgba(255, 255, 255, 0.8); /* White background with transparency */
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            padding: 60px;
-            width: 450px;
-            text-align: center;
-            backdrop-filter: blur(10px); /* Apply blur effect */
-        }
+    h1 {
+      color: #333;
+    }
 
-        h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
 
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
 
-        input[type="text"]:focus,
-        input[type="password"]:focus {
-            border-color: #6e7ff3;
-            outline: none;
-        }
+    button:hover {
+      background-color: #45a049;
+    }
 
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #6e7ff3;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+    a {
+      color: #333;
+      text-decoration: none;
+    }
 
-        button:hover {
-            background-color: #5760b7;
-        }
-
-        .bottom-links {
-            margin-top: 15px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #6e7ff3;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #5760b7;
-        }
-    </style>
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-
-    <div class="container">
-        <h2>Login</h2>
-        <form action="#" method="POST">
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <div class="bottom-links">
-            <a href="#">Forgot Password?</a>
-            <br>
-            <a href="#">Sign Up</a>
-        </div>
-    </div>
-
+  <div class="container">
+    <h1>Login Form</h1>
+    <form>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Login</button>
+      <p>
+        <a href="#">Register</a> | <a href="#">Forgot Password?</a>
+      </p>
+    </form>
+  </div>
 </body>
 </html>
