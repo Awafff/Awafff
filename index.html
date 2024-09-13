@@ -3,97 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Aesthetic</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Form Login</title>
     <style>
         body {
+            background-color: #181818;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #a6d8e4, #f9ecec);
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
+            min-height: 100vh;
+            font-family: sans-serif;
         }
 
         .container {
-            background-color: white;
-            padding: 40px;
+            background-color: #282828;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #333;
+        h1 {
+            color: #00bfff;
+            margin-bottom: 20px;
         }
 
         input[type="text"],
         input[type="password"] {
             width: 100%;
-            padding: 15px;
+            padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ddd;
+            border: none;
             border-radius: 5px;
-            font-size: 16px;
-            transition: border 0.3s ease;
+            background-color: #383838;
+            color: #fff;
         }
 
         input[type="text"]:focus,
         input[type="password"]:focus {
-            border: 1px solid #5b9bd5;
             outline: none;
+            box-shadow: 0 0 5px #00bfff;
         }
 
         button {
-            background-color: #5b9bd5;
-            color: white;
-            padding: 15px;
+            background-color: #00bfff;
+            color: #fff;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #4a8fb2;
-        }
-
-        .bottom-links {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 15px;
+            background-color: #0099cc;
         }
 
         a {
+            color: #00bfff;
             text-decoration: none;
-            color: #5b9bd5;
-            transition: color 0.3s ease;
+            margin-top: 10px;
         }
 
         a:hover {
-            color: #4a8fb2;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Login</h2>
-        <form action="#" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit"><a href="https://free.for.all.by.xyrezz.shopwebsite.my.id">Login</a></button>
+        <h1>Form Login</h1>
+        <form>
+            <input type="text" placeholder="Masukkan Username" required>
+            <input type="password" placeholder="Masukkan Password" required>
+            <button type="submit">Submit</button>
         </form>
-        <div class="bottom-links">
-            <a href="#">Forgot Password?</a>
-            <a href="#">Sign Up</a>
-        </div>
+        <a href="#">Lupa Password?</a>
+        <a href="#">Daftar</a>
     </div>
 </body>
 </html>
