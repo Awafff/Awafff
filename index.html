@@ -80,57 +80,7 @@
         a:hover {
             color: #5a0ea1;
         }
-        .btn {
-
-padding: 10px 26px;
-
-background-color: #f9fafb;
-
-border: 2px solid #111827;
-
-border-radius: 0.5rem;
-
-cursor: pointer;
-
-position: relative;
-
-transition: all 0.3s;
-
-}
-
-.btn::after {
-
-content: "";
-
-position: absolute;
-
-inset: 0;
-
-background-color: #111827;
-
-border-radius: inherit;
-
-translate: 6px 6px;
-
-transition: 8.25s;
-
-z-index: -1;
-
-}
-
-.btn:hover::after {
-
-translate: 0;
-
-}
-
-.btn:hover {
-
-background-color: #111827;
-
-color: #f9fafb;
-
-}
+        
     </style>
 </head>
 <body>
@@ -140,7 +90,7 @@ color: #f9fafb;
         <form id="loginForm">
             <input type="text" placeholder="Username" required>
             <input type="password" placeholder="Password" required>
-            <button clas="btn">LOGIN</button>
+            <button type="submit">Login</button>
         </form>
         <div class="bottom-links">
             <a href="#">Forgot Password?</a>
