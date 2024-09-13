@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Login</title>
+    <title>Login with Animated Background</title>
     <style>
-        body {
-            background-color: #181818;
+        body, html {
+            height: 100%;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(270deg, #ff7e5f, #feb47b);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
-            background-color: #282828;
-            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 300px;
             text-align: center;
         }
 
-        h1 {
-            color: #00bfff;
-            margin-bottom: 20px;
+        h2 {
+            margin: 0 0 20px;
+            color: #333;
         }
 
         input[type="text"],
@@ -32,36 +42,41 @@
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: none;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #383838;
-            color: #fff;
+            font-size: 16px;
+            transition: border-color 0.3s;
         }
 
         input[type="text"]:focus,
         input[type="password"]:focus {
+            border-color: #ff7e5f;
             outline: none;
-            box-shadow: 0 0 5px #00bfff;
         }
 
         button {
-            background-color: #00bfff;
-            color: #fff;
-            padding: 10px 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff7e5f;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
             transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #0099cc;
+            background-color: #feb47b;
+        }
+
+        .bottom-links {
+            margin-top: 15px;
         }
 
         a {
-            color: #00bfff;
             text-decoration: none;
-            margin-top: 10px;
+            color: #ff7e5f;
         }
 
         a:hover {
@@ -70,15 +85,20 @@
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>Login</h1>
-        <form>
-            <input type="text" placeholder="Masukkan Username" required>
-            <input type="password" placeholder="Masukkan Password" required>
-            <button type="submit">Submit</button>
+        <h2>Login</h2>
+        <form action="#" method="POST">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
         </form>
-        <a href="#">Lupa Password?</a>
-        <a href="#">Daftar</a>
+        <div class="bottom-links">
+            <a href="#">Forgot Password?</a>
+            <br>
+            <a href="#">Sign Up</a>
+        </div>
     </div>
+
 </body>
 </html>
