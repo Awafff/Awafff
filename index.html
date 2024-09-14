@@ -18,6 +18,12 @@
             align-items: center;
             background: linear-gradient(135deg, #6a11cb, #2575fc);
             font-family: 'Arial', sans-serif;
+            background-image: url('https://www.imghippo.com/i/hxRYA1726302618.jpg'); /* URL gambar latar belakang */
+            background-size: cover; /* Membuat gambar menutupi seluruh latar belakang */
+            background-repeat: no-repeat; /* Gambar tidak akan diulang */
+            color: white; /* Mengatur warna teks */
+            text-align: center; /* Mengatur teks untuk berada di tengah */
+            padding: 50px; /* Jarak dari tepi */
         }
 
         .container {
@@ -53,14 +59,15 @@
 
         button {
             width: 100%; /* Full width button */
-            padding: 12px;
+            padding: 10px;
             background-color: #6a11cb;
             color: white;
-            border: none;
+            border: balck;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin-bot: 1rem;
         }
 
         button:hover {
@@ -80,6 +87,17 @@
         a:hover {
             color: #5a0ea1;
         }
+.containerr {
+            display: flex;
+            justify-content: space-between; /* Menempatkan tombol di kiri dan kanan */
+            width: 100%;
+            padding: 25px; /* Jarak dalam kontainer */
+        }
+        buttonn {
+            padding: 10px 20px; /* Jarak dalam tombol */
+            font-size: 16px; /* Ukuran font tombol */
+            cursor: pointer; /* Kursor akan berubah saat hover */
+        }
     </style>
 </head>
 <body>
@@ -87,14 +105,17 @@
         <h2>LOGIN YOUR ACOUNT</h2>
         <form id="loginForm">
             <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <a href="#"><button type="submit">Login</button></a>
+            <input type="password" placeholder="Password" required><br><br>
+            <br><br><a href="index.html"><button type="submit">Login</button></a>
         </form>
-        <div class="bottom-links">
-            <a href="#">Lupa Password?</a>
-            <br>
-            <a href="#">Daftar</a>
-        </div>
+        <div class="containerr">
+        <button id="buttonKiri">DAFTAR</button> 
+        <button id="buttonTengah">OWNER</button> 
+        <button id="buttonKanan">LEWATI</button>
+        <br>
+    </div>
+        <br><br>
+        <p>©Always Xyrezz Official</p>
     </div>
 </body>
 </html>
