@@ -3,118 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Samping Lipat dengan Ikon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Form Login dengan Border Bergerak</title>
     <style>
         body {
-            display: flex; /* Mengatur flexbox untuk body */
+            display: flex;
+            justify-content: center; /* Menengahkan isi secara horizontal */
+            align-items: center; /* Menengahkan isi secara vertikal */
             height: 100vh; /* Tinggi viewport penuh */
-            margin: 0; /* Menghapus margin */
+            background-color: #f4f4f4; /* Latar belakang */
             font-family: Arial, sans-serif; /* Mengatur font */
-            overflow: hidden; /* Menyembunyikan scrollbar */
-            margin: 0;
+            margin: 0; /* Menghapus margin */
         }
 
-        .sidebar {
-            width: 150px; /* Lebar sidebar saat terbuka */
-            background-color: #333; /* Warna latar belakang sidebar */
-            color: white; /* Warna teks */
-            padding: 20px; /* Padding dalam sidebar */
-            transition: width 0.3s, opacity 0.3s; /* Transisi untuk lebar dan opacity */
+        .login-container {
+            position: relative; /* Posisi relatif untuk border animasi */
+            padding: 20px;
+            background: #fff; /* Warna latar belakang form */
+            border-radius: 10px; /* Sudut melengkung */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan untuk kedalaman */
+            overflow: hidden; /* Menyembunyikan isi yang melampaui */
         }
 
-        .sidebar.collapsed {
-            width: 40px; /* Lebar saat dilipat */
+        .login-container:before {
+            content: ''; /* Konten kosong untuk pseudo-element */
+            position: absolute; /* Posisi absolut untuk border */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid #007BFF; /* Warna border */
+            border-radius: 10px; /* Sudut melengkung border */
+            animation: borderAnimation 4s infinite; /* Animasikan border */
+            z-index: -1; /* Posisi di belakang konten */
         }
 
-        .sidebar a {
-            text-decoration: none; /* Menghapus garis bawah pada tautan */
-            color: white; /* Warna teks tautan */
-            padding: 10px; /* Padding tautan */
-            display: flex; /* Mengatur flexbox untuk tautan */
-            align-items: center; /* Mengatur item di tengah secara vertikal */
-            margin: 5px 0; /* Jarak antar tombol */
-            transition: background-color 0.3s; /* Animasi perubahan warna */
+        @keyframes borderAnimation {
+            0% {
+                transform: translate(5px, 5px); /* Pergeseran awal */
+            }
+            50% {
+                transform: translate(-5px, -5px); /* Pergeseran ke arah lain */
+            }
+            100% {
+                transform: translate(5px, 5px); /* Kembali ke posisi awal */
+            }
         }
 
-        .sidebar a:hover {
-            background-color: #555; /* Warna latar belakang saat hover */
+        h2 {
+            text-align: center; /* Menengahkan teks */
+            margin-bottom: 20px; /* Jarak bawah */
+            color: #333; /* Warna teks */
         }
 
-        .sidebar i {
-            margin-right: 10px; /* Jarak antara ikon dan teks */
+        input {
+            width: 100%; /* Lebar penuh */
+            padding: 10px; /* Jarak dalam input */
+            margin-bottom: 15px; /* Jarak antar input */
+            border: 1px solid #ccc; /* Border input */
+            border-radius: 5px; /* Sudut melengkung */
+            font-size: 16px; /* Ukuran font */
         }
 
-
-.toggle-button {
-            background-color: #007BFF; /* Warna tombol toggle */
+        button {
+            width: 100%; /* Lebar penuh */
+            padding: 10px; /* Jarak dalam tombol */
+            background-color: #007BFF; /* Warna latar tombol */
             color: white; /* Warna teks tombol */
             border: none; /* Menghapus border default */
-            padding: 10px; /* Padding tombol */
             border-radius: 5px; /* Sudut melengkung */
             cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
-            margin-bottom: 20px; /* Jarak bawah tombol */
+            font-size: 16px; /* Ukuran font */
+            transition: background-color 0.3s; /* Transisi warna saat hover */
         }
 
-        .status {
-            margin-top: 20px;
-            font-size: 20px; /* Ukuran font untuk status */
-        }
-        .content {
-            flex: 1; /* Mengatur agar konten mengambil sisa ruang yang tersedia */
-            padding: 20px; /* Padding dalam konten */
-            background-color: #f4f4f4; /* Warna latar belakang konten */
-            transition: margin-left 0.3s; /* Transisi untuk margin kiri */
-            padding: 0;
-            background-image: url('./img/menu.png'); /* Ganti URL ini dengan URL gambar Anda */
-            background-size: cover; /* Membuat gambar menutupi seluruh elemen */
-            background-position: center; /* Memusatkan gambar */
-            background-repeat: no-repeat; /* Mencegah gambar diulang */
-        
-        }
-
-        .content.shifted {
-            margin-left: 30px; /* Jarak saat sidebar dilipat */
+        button:hover {
+            background-color: #0056b3; /* Warna saat hover */
         }
     </style>
 </head>
-<body class="main" style="background-image: url('./img/menu.png')">
-    <div class="sidebar" id="sidebar">
-           <button class="toggle-button" id="toggleButton"><•></></button>
-        <h3>Menu</h3>
-        <a href="#"><i class="fas fa-home"></i> <span class="text">Home</span></a>
-        <a href="#"><i class="fas fa-shop"></i> <span class="text">Shop</span></a>
-        <a href="#"><i class="fas fa-cogs"></i> <span class="text">Layanan</span></a>
-        <a href="#"><i class="fas fa-envelope"></i> <span class="text">Kontak</span></a>
-        <a href="#"><i class="fas fa-images"></i> <span class="text">Galeri</span></a>
+<body>
+    <div class="login-container">
+        <h2>Form Login</h2>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit"><a href='menu.html'>Login</a></button>
     </div>
-    <div class="content" id="content">
-        <h3>Welcome To Digital Store X-Rezz</h3>
-        <p>Kami Menyedialan Berbagai Kebutuhan Digital</p>
-        <p>Ketik Menu Di Samping Untuk Melihat Berbagai Produk Kami</p>
-    </div>
-
-    <script>
-        const toggleButton = document.getElementById('toggleButton');
-        const sidebar = document.getElementById('sidebar');
-        const content = document.getElementById('content');
-
-        toggleButton.addEventListener('click', () => {
-            sidebar.classList.toggle('collapsed'); // Mengubah kelas sidebar
-            content.classList.toggle('shifted'); // Mengubah kelas konten
-        });
-        
-        // Mengatur tampilan icon atau teks
-        sidebar.querySelectorAll('.text').forEach(text => {
-            text.style.display = sidebar.classList.contains('collapsed') ? 'none' : 'inline';
-        });
-
-        // Event listener untuk mengubah tampilan teks saat sidebar dilipat
-        sidebar.addEventListener('transitionend', () => {
-            sidebar.querySelectorAll('.text').forEach(text => {
-                text.style.display = sidebar.classList.contains('collapsed') ? 'none' : 'inline';
-            });
-        });
-    </script>
 </body>
 </html>
