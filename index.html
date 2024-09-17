@@ -1,98 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Login</title>
+    <title>Menu Samping Lipat dengan Ikon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            font-family: 'Arial', sans-serif;
+            display: flex; /* Mengatur flexbox untuk body */
+            height: 100vh; /* Tinggi viewport penuh */
+            margin: 0; /* Menghapus margin */
+            font-family: Arial, sans-serif; /* Mengatur font */
+            overflow: hidden; /* Menyembunyikan scrollbar */
         }
 
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            width: 500px; 
-            text-align: center;
+        .sidebar {
+            width: 150px; /* Lebar sidebar saat terbuka */
+            background-color: #333; /* Warna latar belakang sidebar */
+            color: white; /* Warna teks */
+            padding: 20px; /* Padding dalam sidebar */
+            transition: width 0.3s, opacity 0.3s; /* Transisi untuk lebar dan opacity */
         }
 
-        h2 {
-            margin-bottom: 20px;
-            color: #333;
+        .sidebar.collapsed {
+            width: 40px; /* Lebar saat dilipat */
         }
 
-        input[type="text"],
-        input[type="password"] {
-            width: 100%; /* Full width input */
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s;
+        .sidebar a {
+            text-decoration: none; /* Menghapus garis bawah pada tautan */
+            color: white; /* Warna teks tautan */
+            padding: 10px; /* Padding tautan */
+            display: flex; /* Mengatur flexbox untuk tautan */
+            align-items: center; /* Mengatur item di tengah secara vertikal */
+            margin: 5px 0; /* Jarak antar tombol */
+            transition: background-color 0.3s; /* Animasi perubahan warna */
         }
 
-        input[type="text"]:focus,
-        input[type="password"]:focus {
-            border-color: #6a11cb;
-            outline: none;
+        .sidebar a:hover {
+            background-color: #555; /* Warna latar belakang saat hover */
         }
 
-        button {
-            padding: 10px 20px;  /* Menambahkan padding ke tombol */
-            font-size: 16px;  /* Ukuran font di dalam tombol */
-            cursor: pointer;  /* Mengubah kursor saat hover */
-            background-color: #007BFF;  /* Warna latar belakang tombol */
-            color: white;  /* Warna teks di dalam tombol */
-            border: none;  /* Menghapus border default */
-            border-radius: 5px;  /* Menambahkan sudut melengkung */
-            transition: background-color 0.3s;  /* Animasi perubahan warna saat hover */
+        .sidebar i {
+            margin-right: 10px; /* Jarak antara ikon dan teks */
         }
 
-        button:hover {
-            background-color: #0056b3;  /* Warna latar belakang saat hover */
+        .toggle-button {
+            background-color: #007BFF; /* Warna tombol toggle */
+            color: white; /* Warna teks tombol */
+            border: none; /* Menghapus border default */
+            padding: 10px; /* Padding tombol */
+            border-radius: 5px; /* Sudut melengkung */
+            cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+            margin-bottom: 20px; /* Jarak bawah tombol */
         }
 
-        .bottom-links {
-            margin-top: 15px;
+        .content {
+            flex: 1; /* Mengatur agar konten mengambil sisa ruang yang tersedia */
+            padding: 20px; /* Padding dalam konten */
+            background-color: #f4f4f4; /* Warna latar belakang konten */
+            transition: margin-left 0.3s; /* Transisi untuk margin kiri */
         }
 
-        a {
-            text-decoration: none;
-            color: #6a11cb;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #5a0ea1;
+        .content.shifted {
+            margin-left: 30px; /* Jarak saat sidebar dilipat */
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h2>LOGIN YOUR ACOUNT</h2>
-        <form id="loginForm">
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit"><a href='menu.html'>Login</a></button>
-        </form>
-        <div class="bottom-links">
-            <button onclick=><a href="#">Lewati</a></button>
-    <button onclick=><a href="#">Owner</a></button>
-        </div>
+<body class="main" style="background-image: url('./img/menu.png')">
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-button" id="toggleButton">Menu</button>
+        <h2>Menu</h2>
+        <a href="#"><i class="fas fa-home"></i> <span class="text">Home</span></a>
+        <a href="#"><i class="fas fa-shop"></i> <span class="text">Shop</span></a>
+        <a href="#"><i class="fas fa-cogs"></i> <span class="text">Layanan</span></a>
+        <a href="#"><i class="fas fa-envelope"></i> <span class="text">Kontak</span></a>
+        <a href="#"><i class="fas fa-images"></i> <span class="text">Galeri</span></a>
     </div>
+    <div class="content" id="content">
+        <h1>Welcome To Digital Store X-Rezz</h1>
+        <p>Kami Menyedialan Berbagai Kebutuhan Digital</p>
+        <p>Ketik Menu Di Samping Untuk Melihat Berbagai Produk Kami</p>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed'); // Mengubah kelas sidebar
+            content.classList.toggle('shifted'); // Mengubah kelas konten
+        });
+        
+        // Mengatur tampilan icon atau teks
+        sidebar.querySelectorAll('.text').forEach(text => {
+            text.style.display = sidebar.classList.contains('collapsed') ? 'none' : 'inline';
+        });
+
+        // Event listener untuk mengubah tampilan teks saat sidebar dilipat
+        sidebar.addEventListener('transitionend', () => {
+            sidebar.querySelectorAll('.text').forEach(text => {
+                text.style.display = sidebar.classList.contains('collapsed') ? 'none' : 'inline';
+            });
+        });
+    </script>
 </body>
 </html>
