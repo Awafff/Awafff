@@ -12,6 +12,13 @@
             margin: 0; /* Menghapus margin */
             font-family: Arial, sans-serif; /* Mengatur font */
             overflow: hidden; /* Menyembunyikan scrollbar */
+            margin: 0;
+            padding: 0;
+            background-image: url('./img/menu.png'); /* Ganti URL ini dengan URL gambar Anda */
+            background-size: cover; /* Membuat gambar menutupi seluruh elemen */
+            background-position: center; /* Memusatkan gambar */
+            background-repeat: no-repeat; /* Mencegah gambar diulang */
+        }
         }
 
         .sidebar {
@@ -44,7 +51,8 @@
             margin-right: 10px; /* Jarak antara ikon dan teks */
         }
 
-        .toggle-button {
+
+.toggle-button {
             background-color: #007BFF; /* Warna tombol toggle */
             color: white; /* Warna teks tombol */
             border: none; /* Menghapus border default */
@@ -54,6 +62,10 @@
             margin-bottom: 20px; /* Jarak bawah tombol */
         }
 
+        .status {
+            margin-top: 20px;
+            font-size: 20px; /* Ukuran font untuk status */
+        }
         .content {
             flex: 1; /* Mengatur agar konten mengambil sisa ruang yang tersedia */
             padding: 20px; /* Padding dalam konten */
@@ -68,8 +80,8 @@
 </head>
 <body class="main" style="background-image: url('./img/menu.png')">
     <div class="sidebar" id="sidebar">
-        <button class="toggle-button" id="toggleButton">Menu</button>
-        <h2>Menu</h2>
+           <button class="toggle-button" id="toggleButton"><•></></button>
+        <h3>Menu</h3>
         <a href="#"><i class="fas fa-home"></i> <span class="text">Home</span></a>
         <a href="#"><i class="fas fa-shop"></i> <span class="text">Shop</span></a>
         <a href="#"><i class="fas fa-cogs"></i> <span class="text">Layanan</span></a>
