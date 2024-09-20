@@ -4,99 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X-Rezz Official</title>
-    <style>
-        body {
-            background-color: #111;
-            color: #fff;
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            background-color: #222;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .username {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .description {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .social-link {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #333;
-            color: #fff;
-            font-size: 20px;
-            line-height: 40px;
-            text-align: center;
-        }
-
-        .button {
-            background-color: #444;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .footer {
-            font-size: 14px;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Magic Navigation Tabs Menu</title>
 </head>
 <body>
-    <div class="container">
-        <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-        <h1 class="username">Rerezz Hosting</h1>
-        <p class="description">ALWAYS X-REZZ OFFICIAL</p>
-      <br><br>
-        <p>Kesempatan itu mirip seperti Matahari terbit. Kalau kau menunggu terlalu lama, Kau bisa melewatkannya.</p>
-        <p>- Website Always X-Rezz Offc</p>
-        <div class="social-links">
-            <a href="#" class="social-link"><i class="fas fa-shop"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-        </div>
-        <button class="button">HOME</button>
-        <button class="button">PROGRESS</button>
-        <button class="button">CONTACT</button>
-        <div class="footer">
-             X-Rezz Offc
-        </div>
-    </div>
+    <nav class="navigation">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fa-sold fa-home"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <span class="title">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-comments"></i></span>
+                    <span class="title">Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-camera"></i></span>
+                    <span class="title">Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-cog"></i></span>
+                    <span class="title">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+<style>
+/* style.css */
+body {
+    font-family: sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin: 0 10px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.navigation .icon {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.navigation .title {
+    font-size: 12px;
+}
+
+.navigation a:hover {
+    color: #f00;
+}
+</style>
+
+<script>
+const navigation = document.querySelector('.navigation');
+const navigationItems = document.querySelectorAll('.navigation li');
+
+navigationItems.forEach(item => {
+    item.addEventListener('click', () => {
+        // Remove active class from all items
+        navigationItems.forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Add active class to clicked item
+        item.classList.add('active');
+    });
+});
+</script>
