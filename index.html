@@ -1,92 +1,102 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Login dengan Border Bergerak</title>
+    <title>X-Rezz Official</title>
     <style>
         body {
+            background-color: #111;
+            color: #fff;
+            font-family: sans-serif;
             display: flex;
-            justify-content: center; /* Menengahkan isi secara horizontal */
-            align-items: center; /* Menengahkan isi secara vertikal */
-            height: 100vh; /* Tinggi viewport penuh */
-            background-color: #f4f4f4; /* Latar belakang */
-            font-family: Arial, sans-serif; /* Mengatur font */
-            margin: 0; /* Menghapus margin */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
         }
 
-        .login-container {
-            position: relative; /* Posisi relatif untuk border animasi */
+        .container {
+            background-color: #222;
+            border-radius: 10px;
             padding: 20px;
-            background: #fff; /* Warna latar belakang form */
-            border-radius: 10px; /* Sudut melengkung */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan untuk kedalaman */
-            overflow: hidden; /* Menyembunyikan isi yang melampaui */
+            text-align: center;
         }
 
-        .login-container:before {
-            content: ''; /* Konten kosong untuk pseudo-element */
-            position: absolute; /* Posisi absolut untuk border */
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 2px solid #007BFF; /* Warna border */
-            border-radius: 10px; /* Sudut melengkung border */
-            animation: borderAnimation 4s infinite; /* Animasikan border */
-            z-index: -1; /* Posisi di belakang konten */
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
 
-        @keyframes borderAnimation {
-            0% {
-                transform: translate(5px, 5px); /* Pergeseran awal */
-            }
-            50% {
-                transform: translate(-5px, -5px); /* Pergeseran ke arah lain */
-            }
-            100% {
-                transform: translate(5px, 5px); /* Kembali ke posisi awal */
-            }
+        .username {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
 
-        h2 {
-            text-align: center; /* Menengahkan teks */
-            margin-bottom: 20px; /* Jarak bawah */
-            color: #333; /* Warna teks */
+        .description {
+            font-size: 16px;
+            margin-bottom: 20px;
         }
 
-        input {
-            width: 100%; /* Lebar penuh */
-            padding: 10px; /* Jarak dalam input */
-            margin-bottom: 15px; /* Jarak antar input */
-            border: 1px solid #ccc; /* Border input */
-            border-radius: 5px; /* Sudut melengkung */
-            font-size: 16px; /* Ukuran font */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
-        button {
-            width: 100%; /* Lebar penuh */
-            padding: 10px; /* Jarak dalam tombol */
-            background-color: #007BFF; /* Warna latar tombol */
-            color: white; /* Warna teks tombol */
-            border: none; /* Menghapus border default */
-            border-radius: 5px; /* Sudut melengkung */
-            cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
-            font-size: 16px; /* Ukuran font */
-            transition: background-color 0.3s; /* Transisi warna saat hover */
+        .social-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333;
+            color: #fff;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
         }
 
-        button:hover {
-            background-color: #0056b3; /* Warna saat hover */
+        .button {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .footer {
+            font-size: 14px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Form Login</h2>
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit"><a href='menu.html'>Login</a></button>
+    <div class="container">
+        <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+        <h1 class="username">Rerezz Hosting</h1>
+        <p class="description">ALWAYS X-REZZ OFFICIAL</p>
+      <br><br>
+        <p>Kesempatan itu mirip seperti Matahari terbit. Kalau kau menunggu terlalu lama, Kau bisa melewatkannya.</p>
+        <p>- Website Always X-Rezz Offc</p>
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fas fa-shop"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+        <button class="button">HOME</button>
+        <button class="button">PROGRESS</button>
+        <button class="button">CONTACT</button>
+        <div class="footer">
+             X-Rezz Offc
+        </div>
     </div>
 </body>
 </html>
