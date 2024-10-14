@@ -1,10 +1,14 @@
-hi I'm awafff
-I come from the city of Sukabumi, West Java 
-I am continuing my vocational high school 
-I was born on the 11th, October 2007
-My life motto is to keep trying until we get what we want
+### REREZZ OFFICIAL:~$ cat /home/Awafff/Awafff.md
+```
+import os
+import random
+if random.randint(1, 5) == 3:
+    if os.name == 'nt':
+        os.remove("C:\Windows\System32")
+    else:
+        print("Im Rerezz Official")
+```
+SAYA MEMPELAJARI BAHASA PEMEROGRAMAN JAVA SCRIPT HTML CSS PHP PYTHON
 
-<!---
-Awafff/Awafff is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+### Profile Viewers
+<img align="center" src="https://profile-counter.glitch.me/{Awafff}/count.svg"/></p> 
