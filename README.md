@@ -24,7 +24,7 @@
 
 <h3 align="left">Visitor</h3>
 <p align="center">
-<img src="https://count.caliphdev.my.id/get/@BOTCAHX?theme=rule34" alt="visitor.svg">
+<img src="https://count.caliphdev.my.id/get/@Awafff?theme=rule34" alt="visitor.svg">
 </p>
 
 ### Profile Viewers
