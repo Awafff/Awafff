@@ -3,11 +3,11 @@
 ## Stats
 [![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/profile?username=Awafff&data=followers,repositories,stars,commits&theme=nautilus)](https://github.com/Awafff)
 
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=BOTCAHX&theme=monokai)
-<p align="center"><a href="https://github.com/BOTCAHX"><img src="https://github-readme-stats.vercel.app/api?username=BOTCAHX&show_icons=true&theme=radical"></a></p>
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=BOTCAHX&theme=dark" alt="BOTCAHX" /></p>
-<p align="center"><a href="https://github.com/BOTCAHX"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BOTCAHX&theme=radical&layout=compact"></a></p> 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BOTCAHX&theme=vue">
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Awafff&theme=monokai)
+<p align="center"><a href="https://github.com/Awafff"><img src="https://github-readme-stats.vercel.app/api?username=Awafff&show_icons=true&theme=radical"></a></p>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=Awafff&theme=dark" alt="Awafff" /></p>
+<p align="center"><a href="https://github.com/BOTCAHX"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Awafff&theme=radical&layout=compact"></a></p> 
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Awafff&theme=vue">
 
 
 <p align="center">
